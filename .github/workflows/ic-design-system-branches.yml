@@ -45,6 +45,8 @@ jobs:
           npm config set ic-design-system:icdsprefix $ICDS_PREFIX
           npm config list
           npm run build:prefixed
+        env:
+          GATSBY_GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
