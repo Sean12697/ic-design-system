@@ -30,10 +30,10 @@ export const snippets = [
   {
     language: "Web component",
     snippet: `<ic-classification-banner/>
-<ic-classification-banner classification="official"></ic-classification-banner>
-<ic-classification-banner classification="official-sensitive"></ic-classification-banner>
-<ic-classification-banner classification="secret"></ic-classification-banner>
-<ic-classification-banner classification="top-secret"></ic-classification-banner>`,
+<ic-classification-banner classification="official" />
+<ic-classification-banner classification="official-sensitive" />
+<ic-classification-banner classification="secret" />
+<ic-classification-banner classification="top-secret" />`,
   },
   {
     language: "React",
@@ -56,3 +56,28 @@ export const snippets = [
 </ComponentPreview>
 
 <ComponentDetails component="ic-classification-banner" />
+
+## Variants
+
+export const snippetsVariants = [
+  {
+    language: "Web component",
+    snippet: `<ic-classification-banner classification="official" up-to="true" country="us" additional-selectors="ukic" />`,
+  },
+  {
+    language: "React",
+    snippet: `<IcClassificationBanner classification="official" upTo="true" country="us" additionalSelectors="ukic"/>`,
+  },
+];
+
+### Up to, country and additional selectors
+
+<ComponentPreview snippets={snippetsVariants} style={{ gap: "8px" }}>
+  <IcClassificationBanner
+    classification="official"
+    inline
+    upTo="true"
+    country="us"
+    additionalSelectors="ukic"
+  />
+</ComponentPreview>
