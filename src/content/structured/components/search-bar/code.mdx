@@ -26,7 +26,7 @@ import { IcSearchBar } from "@ukic/react";
 export const snippets = [
   {
     language: "Web component",
-    snippet: `<ic-search-bar label="What is your favourite coffee?"/>
+    snippet: `<ic-search-bar label="What is your favourite coffee?" />
 <script>
   const searchBar = document.querySelector("ic-search-bar");
   searchBar.options = [
@@ -75,12 +75,12 @@ export const snippets = [
 
 ### With options (no filtering)
 
-export const optionsNoFilteringSnippets = [
+export const optionsNoFiltering = [
   {
     language: "Web component",
     snippet: `<ic-search-bar
   label="What is your favourite coffee?"
-  disable-filter
+  disable-filter="true"
 />
 <br />
 <ic-typography>
@@ -116,7 +116,7 @@ export const optionsNoFilteringSnippets = [
   },
 ];
 
-<ComponentPreview snippets={optionsNoFilteringSnippets}>
+<ComponentPreview snippets={optionsNoFiltering}>
   <IcSearchBar
     label="What is your favourite coffee?"
     disableFilter
@@ -137,13 +137,13 @@ export const optionsNoFilteringSnippets = [
 
 ### With helper text
 
-export const snippetsWithHelperText = [
+export const withHelperText = [
   {
     language: "Web component",
     snippet: `<ic-search-bar
   label="What is your favourite coffee?"
   helper-text="Some helper text"
-></ic-search-bar>
+/>
 <script>
   document.querySelector("ic-search-bar").options = [
     { label: "Espresso", value: "espresso" },
@@ -172,7 +172,7 @@ export const snippetsWithHelperText = [
   },
 ];
 
-<ComponentPreview snippets={snippetsWithHelperText}>
+<ComponentPreview snippets={withHelperText}>
   <IcSearchBar
     label="What is your favourite coffee?"
     helperText="Some helper text"
@@ -189,10 +189,10 @@ export const snippetsWithHelperText = [
 
 ### With hidden label
 
-export const snippetsWithHiddenLabel = [
+export const withHiddenLabel = [
   {
     language: "Web component",
-    snippet: `<ic-search-bar label="What is your favourite coffee?" hide-label></ic-search-bar>
+    snippet: `<ic-search-bar label="What is your favourite coffee?" hide-label="true" />
 <script>
   const searchBar = document.querySelector("ic-search-bar");
   searchBar.options = [
@@ -222,7 +222,7 @@ export const snippetsWithHiddenLabel = [
   },
 ];
 
-<ComponentPreview snippets={snippetsWithHiddenLabel}>
+<ComponentPreview snippets={withHiddenLabel}>
   <IcSearchBar
     label="What is your favourite coffee?"
     hideLabel
@@ -239,10 +239,10 @@ export const snippetsWithHiddenLabel = [
 
 ### Disabled
 
-export const disabledSnippets = [
+export const disabled = [
   {
     language: "Web component",
-    snippet: `<ic-search-bar label="What is your favourite coffee?" disabled></ic-search-bar>
+    snippet: `<ic-search-bar label="What is your favourite coffee?" disabled="true" />
 <script>
   const searchBar = document.querySelector("ic-search-bar");
   searchBar.options = [
@@ -272,7 +272,7 @@ export const disabledSnippets = [
   },
 ];
 
-<ComponentPreview snippets={disabledSnippets}>
+<ComponentPreview snippets={disabled}>
   <IcSearchBar
     label="What is your favourite coffee?"
     disabled
