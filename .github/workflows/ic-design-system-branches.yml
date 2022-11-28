@@ -45,6 +45,8 @@ jobs:
           npm config set ic-design-system:icdsprefix $ICDS_PREFIX
           npm config list
           npm run build:prefixed
+        env:
+          GOOGLE_SEARCH_TOKEN: ${{ secrets.GOOGLE_SEARCH_TOKEN }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
